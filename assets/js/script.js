@@ -9,18 +9,18 @@ document.getElementById("form").addEventListener("submit", function(event) {
         return;
     }
 
-    var saldoVitorias = calcularSaldo(numeroVitorias, numeroDerrotas)
-    var nivel = rankearNivel(saldoVitorias)
+    var saldoVitorias = calcularSaldo(numeroVitorias, numeroDerrotas);
+    var nivel = rankearNivel(saldoVitorias);
 
     document.getElementById("resultado").textContent = `O Herói tem ${saldoVitorias} de saldo está no nível ${nivel}`;
 
     function calcularSaldo(numeroVitorias, numeroDerrotas){
-        let saldoRankeadas
-        return saldoRankeadas = numeroVitorias - numeroDerrotas
+        let saldoRankeadas;
+        return saldoRankeadas = numeroVitorias - numeroDerrotas;
     }
 
     function rankearNivel(saldoVitorias){
-        let nivelRanking
+        let nivelRanking;
         if (saldoVitorias <= 10){
             nivelRanking = "Ferro";
         } else if (saldoVitorias >= 11 && saldoVitorias <= 20){
@@ -36,7 +36,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
         } else if (saldoVitorias >= 101){
             nivelRanking = "Imortal";
         }
-        return nivelRanking
+        return nivelRanking;
     }
 
     setTimeout(function() {
