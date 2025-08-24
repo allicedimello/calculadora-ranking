@@ -21,6 +21,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
 
     function rankearNivel(saldoVitorias){
         let nivelRanking;
+
         if (saldoVitorias <= 10){
             nivelRanking = "Ferro";
         } else if (saldoVitorias >= 11 && saldoVitorias <= 20){
@@ -36,11 +37,12 @@ document.getElementById("form").addEventListener("submit", function(event) {
         } else if (saldoVitorias >= 101){
             nivelRanking = "Imortal";
         }
+        
         return nivelRanking;
     }
 
     setTimeout(function() {
-    document.getElementById("form").reset();
+        document.getElementById("form").reset();
     }, 500);
 
 });
