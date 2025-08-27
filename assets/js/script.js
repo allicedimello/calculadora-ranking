@@ -4,7 +4,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
     var numeroVitorias = parseInt(document.getElementById("numeroVitorias").value);
     var numeroDerrotas = parseInt(document.getElementById("numeroDerrotas").value);
 
-    if (isNaN(numeroVitorias) || isNaN(numeroVitorias)) {
+    if (isNaN(numeroVitorias) || isNaN(numeroDerrotas)) {
         document.getElementById("resultado").textContent = "Por favor, preencha ambos os campos corretamente.";
         return;
     }
